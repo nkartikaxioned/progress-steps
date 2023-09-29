@@ -126,25 +126,35 @@ li {
 
 .list { 
   width: 60%; 
-  height: 60%;
+  height: 10%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
+}
+
+.list::before {
+  content: '';
+  width: 30%;
+  height: 4px;
+  position: absolute;
+  background: #f4e8e8;
+  z-index: -1;
 }
 
 .position {
-  height: 3%;
+  height: 16%;
   padding: 14px;
   border-radius: 30px;
-  outline: 5px solid black;
+  outline: 5px solid #f4e8e8;
   display: flex; 
   align-items: center;  
+  background: #fff;
 }
 
-.position:not(:last-child) { 
-  margin-right: 10% ; 
- 
-}
+.position:not(:last-child) {  margin-right: 10% ; }
+.position:first-child { outline: 5px solid #3898DB; }
+
+
 /*=================================
   main styling ends here
 =================================*/
