@@ -3,6 +3,7 @@
 */
 
 const arrList=document.querySelector('.list'),
+      arrList1=document.querySelector('.list1'),
       arrposition=document.querySelectorAll('.position'),
       buttonprev=document.querySelector('.prev-next-container .previous'),
       buttonnext=document.querySelector('.prev-next-container .next');
@@ -10,31 +11,47 @@ const arrList=document.querySelector('.list'),
 
 window.addEventListener('load', () => {
 let a=1;
-    buttonnext.addEventListener('click',()=>{
-        console.log("in button n")
+    buttonnext.addEventListener('click',() => {
         if(a<4){
-            console.log("in first if")
             a++;
-            console.log(a)
         }
-       load();
-         
+       load();  
     })
-    buttonprev.addEventListener('click',()=>{
+    buttonprev.addEventListener('click',() => {
         if(a>1){
-            console.log("in first if prev")
             a--;
-            console.log(a)
         }
+        previousload();
     })
+
+    function load(){
+        arrposition.forEach((pos, index) => {
+            if(index<a) {
+              pos.classList.add('active');
+            //   buttonprev.style.background='#f4e8e8';
+            } else {
+               pos.classList.remove('active');
+            }
+           
+        })
+      arrList1.style.width=a*7.2+'%';
+    }
+
+    function previousload() {
+        arrposition.forEach((pos, index) => {
+            if(index>=a) {
+              pos.classList.remove('active');
+            //   buttonnext.style.background='#f4e8e8';
+            }    
+        })
+      arrList1.style.width=a*7.2-2.4+'%'; 
+    }
+
 })
 
 
-function load(){
-    arrposition.forEach((pos, index) => {
-        
-    })
-}
+
+
 
 
 

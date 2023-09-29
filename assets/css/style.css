@@ -117,8 +117,6 @@ li {
   transition: .4s;
 }
 
-.active { outline: 5px solid #3898DB; }
-
 /* common style end */
 
 /*=================================
@@ -140,7 +138,7 @@ li {
 }
 
 .list { 
-  width: 60%; 
+  width: 58%; 
   height: 10%;
   margin-bottom: 20px;
   display: flex;
@@ -157,13 +155,14 @@ li {
   z-index: -1;
 }
 
-.list::after {
+.list1 {
   content: '';
   width: 1%;
   height: 4px;
   position: absolute;
+  bottom: 54%;
   left: 33%;
-  background: #3898DB;
+  background: #3898db;
   z-index: -1;
   margin: 2px;
   transition: .4s;
@@ -178,8 +177,10 @@ li {
   display: flex; 
   align-items: center;  
   background: #fff;
+  transition: .2s;
 }
 
+.active { outline: 5px solid #3898DB; }
 .position:not(:last-child) {  margin-right: 10% ; }
 
 main div {
