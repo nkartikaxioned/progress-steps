@@ -9,27 +9,32 @@ const arrList=document.querySelector('.list'),
 
 
 window.addEventListener('load', () => {
-let a=0;
+let a=1;
     buttonnext.addEventListener('click',()=>{
         console.log("in button n")
         if(a<4){
             console.log("in first if")
             a++;
+            console.log(a)
         }
-         if(a<1){
-            console.log("in back")
-            buttonnext.style.background="grey";
-        }
+       load();
+         
     })
     buttonprev.addEventListener('click',()=>{
-        if(a>=3){
+        if(a>1){
+            console.log("in first if prev")
             a--;
+            console.log(a)
         }
     })
 })
 
 
-
+function load(){
+    arrposition.forEach((pos, index) => {
+        
+    })
+}
 
 
 
