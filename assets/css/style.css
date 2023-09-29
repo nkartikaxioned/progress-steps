@@ -114,6 +114,7 @@ li {
   border-radius: 6px;
   background: #3898DB;
   color: #fff;
+  transition: .4s;
 }
 
 /* common style end */
@@ -155,6 +156,19 @@ li {
   background: #f4e8e8;
   z-index: -1;
 }
+
+.list::after {
+  content: '';
+  width: 1%;
+  height: 4px;
+  position: absolute;
+  left: 33%;
+  background: #3898DB;
+  z-index: -1;
+  margin: 2px;
+  transition: .4s;
+}
+
 
 .position {
   height: 16%;
