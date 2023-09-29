@@ -117,6 +117,8 @@ li {
   transition: .4s;
 }
 
+.active { outline: 5px solid #3898DB; }
+
 /* common style end */
 
 /*=================================
@@ -179,7 +181,6 @@ li {
 }
 
 .position:not(:last-child) {  margin-right: 10% ; }
-.position:first-child { outline: 5px solid #3898DB; }
 
 main div {
   width: 20.5%;
