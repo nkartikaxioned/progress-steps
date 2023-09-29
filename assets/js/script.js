@@ -11,13 +11,18 @@ const arrList=document.querySelector('.list'),
 
 window.addEventListener('load', () => {
 let a=1;
+    
+   
+
     buttonnext.addEventListener('click',() => {
+        buttonprev.style.background='#3898DB';
         if(a<4){
             a++;
         }
        load();  
     })
     buttonprev.addEventListener('click',() => {
+        buttonnext.style.background='#3898DB'
         if(a>1){
             a--;
         }
@@ -26,9 +31,11 @@ let a=1;
 
     function load(){
         arrposition.forEach((pos, index) => {
+            if(a>3){
+                buttonnext.style.background='#f4e8e8';
+            }
             if(index<a) {
               pos.classList.add('active');
-            //   buttonprev.style.background='#f4e8e8';
             } else {
                pos.classList.remove('active');
             }
@@ -39,9 +46,11 @@ let a=1;
 
     function previousload() {
         arrposition.forEach((pos, index) => {
+            if(a<2){
+                buttonprev.style.background='#f4e8e8'; 
+            }
             if(index>=a) {
               pos.classList.remove('active');
-            //   buttonnext.style.background='#f4e8e8';
             }    
         })
       arrList1.style.width=a*7.2-2.4+'%'; 
